@@ -1,0 +1,23 @@
+<div class="add-button">
+  <button mat-flat-button color="primary" (click)="goToAddCake()">Add New</button>
+</div>
+<div class="card-container">
+    <mat-card class="card" *ngFor="let cake of allCakes">
+        <mat-card-header class="card-header">
+          <mat-card-title>{{cake.id}} - {{cake.name}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <img mat-card-image class="card-image" src="{{cake.imageurl}}" alt="Photo of cake">
+          <p>
+            {{cake.comment}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions class="actions-button">
+          <button mat-stroked-button color="warn" (click)="deleteCake(cake)">Delete Cake</button>
+        </mat-card-actions>
+      </mat-card>
+      <div *ngIf="allCakes.length == 0">
+        <h3>No Cakes available, please add a new one</h3>
+      </div>
+</div>
+<mat-spinner *ngIf="isLoading"></mat-spinner>

@@ -1,0 +1,30 @@
+.card-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+    margin-top: 16px;
+}
+.card {
+    width: 250px;
+}
+.card-header {
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.add-button {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.card-image {
+    width: auto;
+    max-width: 218px;
+    height: 200px;
+    margin: 16px;
+}
+
+.actions-button {
+    justify-content: center;
+    display: flex;
+}
